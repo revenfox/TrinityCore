@@ -958,6 +958,7 @@ class spell_item_flask_of_the_north : public SpellScript
             case CLASS_PRIEST:
                 possibleSpells.push_back(SPELL_FLASK_OF_THE_NORTH_SP);
                 break;
+            case CLASS_RUNEMASTER:
             case CLASS_DEATH_KNIGHT:
             case CLASS_WARRIOR:
                 possibleSpells.push_back(SPELL_FLASK_OF_THE_NORTH_STR);
