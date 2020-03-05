@@ -135,17 +135,18 @@ enum Classes
     CLASS_MAGE          = 8, // TITLE Mage
     CLASS_WARLOCK       = 9, // TITLE Warlock
     //CLASS_UNK           = 10,
-    CLASS_DRUID         = 11 // TITLE Druid
+    CLASS_DRUID         = 11, // TITLE Druid
+    CLASS_RUNEMASTER    = 12 // TITLE Runemaster
 };
 
 // max+1 for player class
-#define MAX_CLASSES       12
+#define MAX_CLASSES       13
 
 #define CLASSMASK_ALL_PLAYABLE \
     ((1<<(CLASS_WARRIOR-1))|(1<<(CLASS_PALADIN-1))|(1<<(CLASS_HUNTER-1))| \
     (1<<(CLASS_ROGUE-1))  |(1<<(CLASS_PRIEST-1)) |(1<<(CLASS_SHAMAN-1))| \
     (1<<(CLASS_MAGE-1))   |(1<<(CLASS_WARLOCK-1))|(1<<(CLASS_DRUID-1)) | \
-    (1<<(CLASS_DEATH_KNIGHT-1)))
+    (1<<(CLASS_DEATH_KNIGHT-1))|(1<<(CLASS_RUNEMASTER-1)))
 
 #define MAX_TALENT_TREES 3
 
@@ -180,7 +181,10 @@ enum PlayerSpecializations
     SPEC_WARLOCK_DESTRUCTION = 2,
     SPEC_DRUID_BALANCE = 0,
     SPEC_DRUID_FERAL = 1,
-    SPEC_DRUID_RESTORATION = 2
+    SPEC_DRUID_RESTORATION = 2,
+    SPEC_RUNEMASTER_ALTERATION = 0,
+    SPEC_RUNEMASTER_ENCHANTMENT = 1,
+    SPEC_RUNEMASTER_PRIMORDIAL = 2
 };
 
 // valid classes for creature_template.unit_class
@@ -3575,7 +3579,8 @@ enum SpellFamilyNames
     // 14 - unused
     SPELLFAMILY_DEATHKNIGHT = 15, // TITLE Death Knight
     // 16 - unused
-    SPELLFAMILY_PET         = 17  // TITLE Pet
+    SPELLFAMILY_PET         = 17,  // TITLE Pet
+    SPELLFAMILY_RUNEMASTER  = 18  // TITLE Runemaster
 };
 
 enum TradeStatus
