@@ -5336,7 +5336,7 @@ void Player::GetDodgeFromAgility(float &diminishing, float &nondiminishing) cons
          0.024211f, // Warlock
          0.0f,      // ??
          0.056097f, // Druid
-         0.034943f  // Runemaster
+         0.021080f  // Runemaster
     };
     // Crit/agility to dodge/agility coefficient multipliers; 3.2.0 increased required agility by 15%
     const float crit_to_dodge[MAX_CLASSES] =
@@ -5352,7 +5352,7 @@ void Player::GetDodgeFromAgility(float &diminishing, float &nondiminishing) cons
          0.97f/1.15f,    // Warlock (?)
          0.0f,           // ??
          2.00f/1.15f,    // Druid
-         1.00f/1.15f     // Runemaster
+         1.60f/1.15f     // Runemaster
     };
 
     uint8 level = GetLevel();
