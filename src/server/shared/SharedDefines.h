@@ -2855,7 +2855,8 @@ enum QuestSort
     QUEST_SORT_JEWELCRAFTING       = 373,
     QUEST_SORT_NOBLEGARDEN         = 374,
     QUEST_SORT_PILGRIMS_BOUNTY     = 375,
-    QUEST_SORT_LOVE_IS_IN_THE_AIR  = 376
+    QUEST_SORT_LOVE_IS_IN_THE_AIR  = 376,
+    QUEST_SORT_RUNEMASTER          = 377
 };
 
 constexpr uint8 ClassByQuestSort(int32 QuestSort)
@@ -2872,6 +2873,7 @@ constexpr uint8 ClassByQuestSort(int32 QuestSort)
         case QUEST_SORT_PRIEST:         return CLASS_PRIEST;
         case QUEST_SORT_DRUID:          return CLASS_DRUID;
         case QUEST_SORT_DEATH_KNIGHT:   return CLASS_DEATH_KNIGHT;
+        case QUEST_SORT_RUNEMASTER:     return CLASS_RUNEMASTER;
     }
     return 0;
 }
@@ -3029,10 +3031,13 @@ enum SkillType
     SKILL_PET_WASP                 = 785,
     SKILL_PET_EXOTIC_RHINO         = 786,
     SKILL_PET_EXOTIC_CORE_HOUND    = 787,
-    SKILL_PET_EXOTIC_SPIRIT_BEAST  = 788
+    SKILL_PET_EXOTIC_SPIRIT_BEAST  = 788,
+    SKILL_ALTERATION               = 850,
+    SKILL_ENCHANTMENT              = 851,
+    SKILL_PRIMORDIAL               = 852
 };
 
-#define MAX_SKILL_TYPE               789
+#define MAX_SKILL_TYPE               900
 
 constexpr SkillType SkillByLockType(LockType locktype)
 {
@@ -3562,25 +3567,25 @@ enum PetTameFailure
 // EnumUtils: DESCRIBE THIS
 enum SpellFamilyNames
 {
-    SPELLFAMILY_GENERIC     = 0,  // TITLE Generic
-    SPELLFAMILY_UNK1        = 1,  // TITLE Unk1 (events, holidays, ...)
-    // 2 - unused
-    SPELLFAMILY_MAGE        = 3,  // TITLE Mage
-    SPELLFAMILY_WARRIOR     = 4,  // TITLE Warrior
-    SPELLFAMILY_WARLOCK     = 5,  // TITLE Warlock
-    SPELLFAMILY_PRIEST      = 6,  // TITLE Priest
-    SPELLFAMILY_DRUID       = 7,  // TITLE Druid
-    SPELLFAMILY_ROGUE       = 8,  // TITLE Rogue
-    SPELLFAMILY_HUNTER      = 9,  // TITLE Hunter
-    SPELLFAMILY_PALADIN     = 10, // TITLE Paladin
-    SPELLFAMILY_SHAMAN      = 11, // TITLE Shaman
-    SPELLFAMILY_UNK2        = 12, // TITLE Unk2 (Silence resistance?)
-    SPELLFAMILY_POTION      = 13, // TITLE Potion
-    // 14 - unused
-    SPELLFAMILY_DEATHKNIGHT = 15, // TITLE Death Knight
-    // 16 - unused
-    SPELLFAMILY_PET         = 17,  // TITLE Pet
-    SPELLFAMILY_RUNEMASTER  = 18  // TITLE Runemaster
+    SPELLFAMILY_GENERIC     = 0,  // TITLE Generic                      1
+    SPELLFAMILY_UNK1        = 1,  // TITLE Unk1 (events, holidays, ...) 2
+    // 2 - unused                                                       4
+    SPELLFAMILY_MAGE        = 3,  // TITLE Mage                         8
+    SPELLFAMILY_WARRIOR     = 4,  // TITLE Warrior                      16
+    SPELLFAMILY_WARLOCK     = 5,  // TITLE Warlock                      32
+    SPELLFAMILY_PRIEST      = 6,  // TITLE Priest                       64
+    SPELLFAMILY_DRUID       = 7,  // TITLE Druid                        128
+    SPELLFAMILY_ROGUE       = 8,  // TITLE Rogue                        256
+    SPELLFAMILY_HUNTER      = 9,  // TITLE Hunter                       512
+    SPELLFAMILY_PALADIN     = 10, // TITLE Paladin                      1024
+    SPELLFAMILY_SHAMAN      = 11, // TITLE Shaman                       2048
+    SPELLFAMILY_UNK2        = 12, // TITLE Unk2 (Silence resistance?)   4096
+    SPELLFAMILY_POTION      = 13, // TITLE Potion                       8192
+    // 14 - unused                                                      16384
+    SPELLFAMILY_DEATHKNIGHT = 15, // TITLE Death Knight                 32768
+    // 16 - unused                                                      65536
+    SPELLFAMILY_PET         = 17,  // TITLE Pet                         131072
+    SPELLFAMILY_RUNEMASTER  = 18  // TITLE Runemaster                   262144
 };
 
 enum TradeStatus

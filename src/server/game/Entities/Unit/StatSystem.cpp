@@ -392,6 +392,9 @@ void Player::UpdateAttackPowerAndDamage(bool ranged)
             case CLASS_ROGUE:
                 val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
                 break;
+            case CLASS_RUNEMASTER:
+                val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
+                break;
             case CLASS_HUNTER:
                 val2 = level * 2.0f + GetStat(STAT_STRENGTH) + GetStat(STAT_AGILITY) - 20.0f;
                 break;
@@ -685,7 +688,8 @@ float const m_diminishing_k[MAX_CLASSES] =
     0.9830f,  // Mage
     0.9830f,  // Warlock
     0.0f,     // ??
-    0.9720f   // Druid
+    0.9720f,  // Druid
+    0.9880f   // Runemaster
 };
 
 // helper function
@@ -723,7 +727,8 @@ float const miss_cap[MAX_CLASSES] =
     16.00f,     // Mage    //?
     16.00f,     // Warlock //?
     0.0f,       // ??
-    16.00f      // Druid   //?
+    16.00f,     // Druid   //?
+    16.00f     // Runemaster //correct
 };
 
 float Player::GetMissPercentageFromDefense() const
@@ -749,7 +754,8 @@ float const parry_cap[MAX_CLASSES] =
     0.0f,           // Mage
     0.0f,           // Warlock
     0.0f,           // ??
-    0.0f            // Druid
+    0.0f,           // Druid
+    145.560408f     // Runemaster
 };
 
 void Player::UpdateParryPercentage()
@@ -791,7 +797,8 @@ float const dodge_cap[MAX_CLASSES] =
     150.375940f,    // Mage
     150.375940f,    // Warlock
     0.0f,           // ??
-    116.890707f     // Druid
+    116.890707f,    // Druid
+    145.560408f     // Runemaster
 };
 
 void Player::UpdateDodgePercentage()
